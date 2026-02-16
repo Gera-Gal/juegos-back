@@ -1,7 +1,5 @@
 package com.ebc.juegos_back.dto
 
-import java.awt.Choice
-
 data class Choices (
     val user: String,
     val cpu: String
