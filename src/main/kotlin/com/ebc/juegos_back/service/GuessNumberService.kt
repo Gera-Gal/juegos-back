@@ -9,7 +9,7 @@ class GuessNumberService {
     private var secretNum: Int = 0;
 
     private fun generateSecretNum(maxNumber: Int) {
-        secretNum = Random.nextInt(maxNumber + 1) + 1;
+        secretNum = Random.nextInt(maxNumber + 1);
     }
 
     fun attemptToGuess(attempt: Int, maxNum: Int): NumberApiResponse {
