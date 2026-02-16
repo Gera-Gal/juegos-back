@@ -10,6 +10,11 @@ data class NumberApiResponse(
     val number: Int
 )
 
+data class GuessApiResponse(
+    val message: String,
+    val number: String
+)
+
 data class ChoicesApiResponse(
     val message: String,
     val result: Int,

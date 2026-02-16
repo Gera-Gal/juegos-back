@@ -1,5 +1,6 @@
 package com.ebc.juegos_back.controller
 
+import com.ebc.juegos_back.dto.GuessApiResponse
 import com.ebc.juegos_back.dto.NumberApiResponse
 import com.ebc.juegos_back.service.LotteryService
 import org.springframework.web.bind.annotation.CrossOrigin
@@ -15,7 +16,7 @@ class LotteryController(
     private val lotteryService: LotteryService
 ) {
     @GetMapping
-    fun getWinnerNum(@RequestParam attempt: Int, @RequestParam digitLength: Int): NumberApiResponse {
+    fun getWinnerNum(@RequestParam attempt: String, @RequestParam digitLength: Int): GuessApiResponse {
         return lotteryService.getWinnerNum(attempt, digitLength);
     }
 }
